@@ -1,0 +1,45 @@
+baseURL = "/"
+languageCode = "en-US"
+defaultContentLanguage = "en"
+
+title = "Laravel Restive Documentation"
+theme = "theme-learn"
+##themesdir = "../.."
+metaDataFormat = "yaml"
+defaultContentLanguageInSubdir= true
+
+[params]
+editURL = "https://github.com/laravel-restive/restive-docs/edit/master/exampleSite/content/"
+description = "Documentation for Laravel Restive"
+author = "Ian Wilson"
+showVisitedLinks = true
+disableBreadcrumb = false
+disableNextPrev = false
+
+[outputs]
+home = [ "HTML", "RSS", "JSON"]
+
+[Languages]
+[Languages.en]
+title = "Documentation for Laravel Restive"
+weight = 1
+languageName = "English"
+
+[[Languages.en.menu.shortcuts]]
+name = "<i class='fab fa-fw fa-github'></i> GitHub Code repo"
+identifier = "gcr"
+url = "https://github.com/laravel-restive/restive"
+weight = 10
+
+[[Languages.en.menu.shortcuts]]
+name = "<i class='fab fa-fw fa-github'></i> GitHub Documentation repo"
+identifier = "gdr"
+url = "https://github.com/laravel-restive/restive-docs"
+weight = 20
+
+[[Languages.en.menu.shortcuts]]
+name = "<i class='fas fa-fw fa-bookmark'></i> Hugo Documentation"
+identifier = "hugodoc"
+url = "https://gohugo.io/"
+weight = 30
+
