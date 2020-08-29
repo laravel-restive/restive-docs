@@ -1,0 +1,4 @@
+[submodule "public"]
+	path = public
+	url = https://github.com/laravel-restive/laravel-restive.github.io.git
+	branch = master

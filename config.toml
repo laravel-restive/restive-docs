@@ -9,7 +9,7 @@ metaDataFormat = "yaml"
 defaultContentLanguageInSubdir= true
 
 [params]
-editURL = "https://github.com/laravel-restive/restive-docs/edit/master/exampleSite/content/"
+editURL = "https://github.com/laravel-restive/restive-docs/tree/master/content/"
 description = "Documentation for Laravel Restive"
 author = "Ian Wilson"
 showVisitedLinks = true
