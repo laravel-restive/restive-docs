@@ -31,24 +31,13 @@ e.g
 
 Updates can use filtering e.g.
 
-**PUT api/modelname** -> controller@update
-
-while including something like
-
-`['@parser' => ['whereBetween' => ['age:21:65']]`
-
-
-
+**PUT api/modelname?where[]=id:eq:2** -> controller@update
 
 **DELETE api/modelname/{id}** - controller@destroy
 
 Deletes can use filtering e.g.
 
-**DELETE api/modelname** -> controller@destroy
-
- including something like
- 
-`['@parser' => ['whereBetween' => ['age:21:65']]`
+**DELETE api/modelname?where[]=id:eq:2** -> controller@destroy
 
 
 

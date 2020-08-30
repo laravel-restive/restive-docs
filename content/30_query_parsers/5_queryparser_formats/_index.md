@@ -3,10 +3,6 @@ title: Query Formatting
 weight: 5
 ---
 
-## GET routes
-
-For controller index routes, e.g. GET /resource query parameters are appended to the url.
-
 ### examples
 
 given a route such as 
@@ -23,13 +19,8 @@ query parameters can be added such as :-
    
 ## PUT/DELETE routes
 
-PUT (update) and DELETE routes don;t allow for query parameters in the url. In these cases we need to 
-add the Restive query parameters into the body of the request. 
-
-We also need to ensure that those query parameters don;t clash with any model fields we maight be passing
-in the request (for model updates).
-
-In these cases we can add a **@parser** field to the request body.
+PUT (update) and DELETE routes can add query parameters to the URL just like GET routes above,
+although some options may not be meaningful in these contexts.
 
 Again, given the route
 
@@ -37,13 +28,12 @@ Again, given the route
     
 and using http test code to show the request.
 
-        $response = $this->delete("/user", ['@parser' => ['where' => ['id:eq:2']]]);
+        $response = $this->delete("/user?where[]=id:eq:2");
 
-        $response = $this->put("/user", [
+        $response = $this->put("/user?where[]=email:eq:dirk@holisticdetective.com", [
             'email' => 'dirk@holisticdetective.com',
             'name' => 'Dirk Gently',
             'age' => 45,
-            '@parser' => ['where' => ['email:eq:dirk@holisticdetective.com']]
         ]);
 
 
