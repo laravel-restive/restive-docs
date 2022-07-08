@@ -12,7 +12,7 @@ Thanks go to
 From our composer.json
 
 - [orchestra/testbench](<https://github.com/orchestral/testbench/>)
-- [phpuni](<https://phpunit.de/>)
+- [phpunit](<https://phpunit.de/>)
 - [codedungeon/phpunit-result-printer](<https://github.com/mikeerickson/phpunit-pretty-result-printer>)
 - [nunomaduro/collisio](<https://github.com/nunomaduro/collision>)
 
