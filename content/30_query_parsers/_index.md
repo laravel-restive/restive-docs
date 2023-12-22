@@ -6,8 +6,6 @@ The query parser allows for complex filtering, sorting, the use of child relatio
 
 Currently the filter parser supports
 
-- columns
-- with
 - where
 - orWhere
 - whereIn
@@ -18,11 +16,14 @@ Currently the filter parser supports
 - whereNotBetween
 - orWhereBetween
 - orWhereNotBetween
+- columns
 - withTrashed
 - onlyTrashed
 - scope
+- with
 - sort
 - join
+- limit
 
 
 **sort** allows for multiple sort targets for ascending and descending sorts.
@@ -33,5 +34,7 @@ Currently the filter parser supports
 
 **Joins** are also supported
 
-Query results by default return all columns for the query, however you can use the columns filter to restrict which
-columns are returned.
+**Columns** allows for specifying which columns are returned.
+
+**Soft deletes** are also supported with the withTrashed and onlyTrashed filters.
+

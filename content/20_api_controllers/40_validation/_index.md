@@ -6,23 +6,62 @@ weight: 40
 The base **ApiController** class that your controller extends contains calls
 to Laravel's Validation system.
 
-To use validation on your api request you must create a public **rules** method on
-the model your controller accesses.
+THe api controller uses a custom `FormRequest` class to allow validation errors to be returned as 
+part of the json response. 
 
-e.g.
+To create your own validator/form request class. 
 
-    public function rules($id = 0)
+For the controller you can set the request class that is used e.g. 
+
+by setting 
+
+    protected string $request = 'SomeRequest';
+
+in the [controller]({{< ref "/20_api_controllers/10_controller_definition/_index.md" >}}) definition 
+
+
+The form request class needs to define 3 methods
+
+## commonRules
+
+        public function commonRules() : array
+
+returns an array of Laravel rules that will be run on both model store & update methods.
+
+## storeRules
+
+    public function storeRules() : array
+
+returns an array of Laravel rules that will be run on just the  model store method.
+
+## updateRules
+
+    public function updateRules() : array
+
+returns an array of Laravel rules that will be run on just the  model update method.
+
+## Examples
+
+    public function commonRules() : array
+    {
+        return  [
+            'age' => ['required'],
+            'email' => ['required'],
+        ];
+    }
+
+    public function updateRules() : array
     {
         return [
-            'email' => 'required|unique:zcwilt_users'.($id ? ",email,$id" : ''),
-            'name' => 'required'
+            'email' => ['unique:users,email,' . $this->id]
         ];
     }
 
 {{% notice info %}}
-For update methods, the primary key value is passed as the **$id** parameter.
-{{% /notice %}}
 
+Validation errors will be returned as part of the JSON response.
+
+{{% /notice %}}
 
 {{% notice warning %}}
 The controller uses **$request->all()** to pass request fields
