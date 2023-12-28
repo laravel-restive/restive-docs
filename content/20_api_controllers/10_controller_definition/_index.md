@@ -17,8 +17,12 @@ The controller definition is fairly simple
 
     class DummySimpleController extends ApiController
     {
-        protected $modelName = '\\Restive\\Models\\DummySimple';
-        protected $request = ""
+        protected $modelName = '\\Restive\\Models\\DummySimple'; // an example of defining a custom model
+        protected $request = ''; // we can define a custome Form Request class here
+        protected $resource = ''; // we can define a custom resource class here
+        protected $resourceCollection = ''; // we can define a custom resourceCollection class here
+        protected paginator = ''; // we can define a custom paginator class here
+
 
 {{% notice info %}}
 The **protected $modelName** defines the Eloquent Model that will be used by the controller. The factory class used will try and resolve the model

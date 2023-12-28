@@ -63,6 +63,12 @@ Validation errors will be returned as part of the JSON response.
 
 {{% /notice %}}
 
+{{% notice info %}}
+
+There is a [console command]({{< ref "/45_console_commands/" >}}) to create a stub custom form request.
+
+{{% /notice %}}
+
 {{% notice warning %}}
 The controller uses **$request->all()** to pass request fields
     to the model update/create methods. This could allow malicious users to update
