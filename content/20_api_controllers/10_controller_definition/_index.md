@@ -30,7 +30,7 @@ The **protected $modelName** defines the Eloquent Model that will be used by the
 
         protected $modelName = 'ModelName';
 
-There is a [console command]({{< ref "/45_console_commands/_index.md" >}}) available to create a stub controller.
+There is a [console command]({{< ref "45_console_commands/_index.md" >}}) available to create a stub controller.
 {{% /notice %}}
 
 {{% notice info %}}
@@ -39,5 +39,5 @@ will try and resolve the Form Request from the App/Http/Requests folder, althoug
 
         protected $request = 'FormRequestName';
 
-There is a [console command]({{< ref "/45_console_commands/_index.md" >}}) available to create a stub Form Request.
+There is a [console command]({{< ref "45_console_commands/_index.md" >}}) available to create a stub Form Request.
 {{% /notice %}}

@@ -17,7 +17,7 @@ by setting
 
     protected string $request = 'SomeRequest';
 
-in the [controller]({{< ref "/20_api_controllers/10_controller_definition/_index.md" >}}) definition 
+in the [controller]({{< ref "20_api_controllers/10_controller_definition/_index.md" >}}) definition 
 
 
 The form request class needs to define 3 methods
@@ -65,7 +65,7 @@ Validation errors will be returned as part of the JSON response.
 
 {{% notice info %}}
 
-There is a [console command]({{< ref "/45_console_commands/" >}}) to create a stub custom form request.
+There is a [console command]({{< ref "45_console_commands/" >}}) to create a stub custom form request.
 
 {{% /notice %}}
 
